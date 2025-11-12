@@ -1,0 +1,30 @@
+/**
+ * Zodiac Cipher Font - Web Font Declaration
+ *
+ * Usage:
+ * 1. Link this CSS file in your HTML:
+ *    <link rel="stylesheet" href="path/to/fontface.css">
+ *
+ * 2. Or copy the @font-face declaration below into your stylesheet
+ *
+ * 3. Apply the font:
+ *    .cipher { font-family: 'Zodiac', monospace; }
+ */
+
+@font-face {
+  font-family: 'Zodiac';
+  src: url('../fonts/Zodiac-Regular.woff2') format('woff2'),
+       url('../fonts/Zodiac-Regular.otf') format('opentype'),
+       url('../fonts/Zodiac-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Example usage */
+.zodiac-cipher {
+  font-family: 'Zodiac', monospace;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free cipher fonts for puzzle designers and cryptography enthusiasts. Zodiac, Pigpen, and mystery-themed cipher fonts.">
+  <title>NQR Labs Cipher Fonts</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #04070a;
+      color: #d7e8ff;
+      line-height: 1.6;
+    }
+
+    .app-logo {
+      max-width: 200px; 
+      height: auto;
+      margin: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+
+    header {
+      background: linear-gradient(135deg, #0a0f1a 0%, #1a1a2e 100%);
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 2px solid #00d4ff;
+      box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #00d4ff;
+      text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #97f3d2;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .intro h2 {
+      color: #00ffaa;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    .intro p {
+      max-width: 800px;
+      margin: 0 auto 20px;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: linear-gradient(135deg, #5de1ff 0%, #00ffaa 100%);
+      color: #04070a;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 15px rgba(93, 225, 255, 0.3);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(93, 225, 255, 0.5);
+    }
+
+    .btn.secondary {
+      background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+      color: #00d4ff;
+      border: 1px solid #00d4ff;
+    }
+
+    .font-card {
+      background: linear-gradient(135deg, #0c1318 0%, #16213e 100%);
+      border: 1px solid rgba(0, 212, 255, 0.3);
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 50px;
+      transition: border-color 0.3s;
+    }
+
+    .font-card:hover {
+      border-color: #00d4ff;
+    }
+
+    .font-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .font-header h3 {
+      font-size: 2rem;
+      color: #5de1ff;
+      margin: 0;
+    }
+
+    .font-version {
+      color: #97f3d2;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .specimen-image {
+      width: 100%;
+      background: #000;
+      border: 2px solid rgba(0, 212, 255, 0.2);
+      border-radius: 8px;
+      margin: 20px 0;
+      padding: 20px;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-style: italic;
+    }
+    .specimen-image img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    };
+
+    .font-description {
+      margin: 20px 0;
+      line-height: 1.8;
+    }
+
+    .font-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .feature {
+      background: rgba(0, 212, 255, 0.05);
+      border-left: 3px solid #00d4ff;
+      padding: 12px;
+      border-radius: 4px;
+    }
+
+    .feature strong {
+      color: #00ffaa;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .download-section {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .download-btn {
+      padding: 10px 20px;
+      background: rgba(0, 212, 255, 0.1);
+      border: 1px solid #00d4ff;
+      color: #00d4ff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+
+    .download-btn:hover {
+      background: rgba(0, 212, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .create-section {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      border: 2px solid #00ffaa;
+      border-radius: 10px;
+      padding: 40px;
+      text-align: center;
+      margin: 60px 0;
+    }
+
+    .create-section h2 {
+      color: #00ffaa;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .create-section p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .calligraphr-logo {
+      display: inline-block;
+      margin: 20px 0;
+      padding: 15px 30px;
+      background: #fff;
+      border-radius: 8px;
+      color: #333;
+      font-weight: bold;
+      font-size: 1.3rem;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .calligraphr-logo:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #0a0f1a;
+      border-top: 1px solid rgba(0, 212, 255, 0.2);
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    footer p {
+      color: #97f3d2;
+      margin: 10px 0;
+    }
+
+    footer a {
+      color: #5de1ff;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover {
+      color: #00ffaa;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .font-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .font-features {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/images/logo.png" alt="NQR Labs Cipher Fonts Logo" class="app-logo">
+    <h1>NQR Labs Cipher Fonts</h1>
+    <p>Free handcrafted cipher fonts for puzzle designers and cryptography enthusiasts</p>
+  </header>
+
+  <div class="container">
+    <section class="intro">
+      <h2>Create Authentic Cipher Puzzles</h2>
+      <p>
+        Welcome to the NQR Labs collection of cipher fonts. Each font in this collection has been meticulously handcrafted to provide authentic cipher alphabets for alternate reality games, puzzle hunts, escape rooms, and cryptography education.
+      </p>
+      <p>
+        All fonts are <strong>free for personal &amp; commercial use</strong> under the SIL Open Font License 1.1. You may modify and redistribute the fonts. If you share the font files or derivatives, include OFL.txt and keep the copyright notice. Modified versions must be renamed. You may not sell the font file by itself (bundling is fine). No attribution required in end-products, but credit is appreciated.
+      </p>
+      <div class="cta-buttons">
+      <!--
+        <a href="specimen.html" class="btn">🎨 Specimen Generator</a>
+      -->
+        <a href="https://github.com/NQRLabs/nqrlabs.github.io/tree/main/arg-fonts" class="btn" target="_blank">View on GitHub</a>
+        <a href="README.md" class="btn secondary">Full Documentation</a>
+        <a href="../" class="btn secondary">← Back to NQR Labs</a>
+      </div>
+    </section>
+
+    <!-- Zodiac Cipher -->
+    <article class="font-card">
+      <div class="font-header">
+        <h3>Zodiac</h3>
+        <span class="font-version">v1.0.0</span>
+      </div>
+
+      <div class="specimen-image">
+        <img
+          src="ZodiacCipher/specimen/zodiac-specimen.png"
+          alt="Zodiac font specimen"
+          width="1200" height="400"
+          loading="lazy" decoding="async"
+        />
+      </div>
+
+      <div class="font-description">
+        <p>
+          A cipher font based on the infamous symbols used by the Zodiac Killer in his cryptographic messages from the late 1960s and early 1970s. This font recreates the symbols from the Zodiac's most famous ciphers, including the 408-character cipher (solved in 1969) and the 340-character cipher (solved in 2020).
+        </p>
+        <p>
+          Perfect for historical true crime ARGs, cryptography education, and authentic-looking cipher puzzles.
+        </p>
+      </div>
+
+      <div class="font-features">
+        <div class="feature">
+          <strong>Characters</strong>
+          26 letters + numbers + punctuation
+        </div>
+        <div class="feature">
+          <strong>Style</strong>
+          Historical cipher symbols
+        </div>
+        <div class="feature">
+          <strong>Formats</strong>
+          TTF, OTF, WOFF2
+        </div>
+        <div class="feature">
+          <strong>License</strong>
+          OFL 1.1 (Free)
+        </div>
+      </div>
+
+      <div class="download-section">
+        <a href="ZodiacCipher/fonts/Zodiac-Regular.ttf" class="download-btn" download>⬇ TTF (Windows/Linux)</a>
+        <a href="ZodiacCipher/fonts/Zodiac-Regular.otf" class="download-btn" download>⬇ OTF (macOS)</a>
+        <a href="ZodiacCipher/fonts/Zodiac-Regular.woff2" class="download-btn" download>⬇ WOFF2 (Web)</a>
+        <a href="ZodiacCipher/README.md" class="download-btn">📄 Documentation</a>
+        <a href="ZodiacCipher/css/fontface.css" class="download-btn">CSS @font-face</a>
+      </div>
+    </article>
+
+    <!-- Pigpen Cipher -->
+    <article class="font-card">
+      <div class="font-header">
+        <h3>Pigpen</h3>
+        <span class="font-version">v1.0.0</span>
+      </div>
+
+      <div class="specimen-image">
+        <img
+          src="PigpenCipher/specimen/pigpen-specimen.png"
+          alt="Pigpen font specimen"
+          width="1200" height="400"
+          loading="lazy" decoding="async"
+        />
+      </div>
+
+      <div class="font-description">
+        <p>
+          The classic Freemason cipher, also known as the Masonic cipher or tic-tac-toe cipher. This geometric substitution cipher uses two grids (a 3x3 grid and an X-shaped grid) with dots to represent the 26 letters of the alphabet.
+        </p>
+        <p>
+          Used by secret societies since the 18th century, this cipher remains popular for educational cryptography and mystery-themed puzzles. The clean geometric design ensures maximum legibility.
+        </p>
+      </div>
+
+      <div class="font-features">
+        <div class="feature">
+          <strong>Characters</strong>
+          26 letters (A-Z)
+        </div>
+        <div class="feature">
+          <strong>Style</strong>
+          Geometric grid cipher
+        </div>
+        <div class="feature">
+          <strong>Formats</strong>
+          TTF, OTF, WOFF2
+        </div>
+        <div class="feature">
+          <strong>License</strong>
+          OFL 1.1 (Free)
+        </div>
+      </div>
+
+      <div class="download-section">
+        <a href="PigpenCipher/fonts/Pigpen-Regular.ttf" class="download-btn" download>⬇ TTF (Windows/Linux)</a>
+        <a href="PigpenCipher/fonts/Pigpen-Regular.otf" class="download-btn" download>⬇ OTF (macOS)</a>
+        <a href="PigpenCipher/fonts/Pigpen-Regular.woff2" class="download-btn" download>⬇ WOFF2 (Web)</a>
+        <a href="PigpenCipher/README.md" class="download-btn">📄 Documentation</a>
+        <a href="PigpenCipher/css/fontface.css" class="download-btn">CSS @font-face</a>
+      </div>
+    </article>
+
+    <!-- Falls Cipher -->
+    <article class="font-card">
+      <div class="font-header">
+        <h3>Falls Cipher</h3>
+        <span class="font-version">v1.0.0</span>
+      </div>
+
+      <div class="specimen-image">
+        <img
+          src="FallsCipher/specimen/fallscipher-specimen.png"
+          alt="Falls cipher font specimen"
+          width="1200" height="400"
+          loading="lazy" decoding="async"
+        />
+      </div>
+
+      <div class="font-description">
+        <p>
+          A mystery-themed symbol substitution cipher inspired by cryptographic puzzles in adventure media. Combines geometric shapes, modified letters, and occult-style symbols to create a visually distinctive cryptographic alphabet.
+        </p>
+        <p>
+          This is the first font in the planned Falls Cipher series, which will cover various symbol cipher systems from mystery-themed sources. Perfect for supernatural mysteries, adventure ARGs, and puzzle hunts.
+        </p>
+      </div>
+
+      <div class="font-features">
+        <div class="feature">
+          <strong>Characters</strong>
+          26 letters (A-Z)
+        </div>
+        <div class="feature">
+          <strong>Style</strong>
+          Mystery/Occult symbols
+        </div>
+        <div class="feature">
+          <strong>Formats</strong>
+          TTF, OTF, WOFF2
+        </div>
+        <div class="feature">
+          <strong>License</strong>
+          OFL 1.1 (Free)
+        </div>
+      </div>
+
+      <div class="download-section">
+        <a href="FallsCipher/fonts/FallsCipher-Regular.ttf" class="download-btn" download>⬇ TTF (Windows/Linux)</a>
+        <a href="FallsCipher/fonts/FallsCipher-Regular.otf" class="download-btn" download>⬇ OTF (macOS)</a>
+        <a href="FallsCipher/fonts/FallsCipher-Regular.woff2" class="download-btn" download>⬇ WOFF2 (Web)</a>
+        <a href="FallsCipher/README.md" class="download-btn">📄 Documentation</a>
+        <a href="FallsCipher/css/fontface.css" class="download-btn">CSS @font-face</a>
+      </div>
+    </article>
+
+    <!-- Create Your Own Section -->
+    <section class="create-section">
+      <h2>Create Your Own Cipher Font</h2>
+      <p>
+        All fonts in this collection were created using <strong>Calligraphr</strong>, a powerful web-based tool that lets you transform your handwriting or custom designs into working fonts. No software installation required!
+      </p>
+      <p>
+        Whether you want to create a cipher font for your ARG, design a handwriting font, or build a custom alphabet, Calligraphr makes it simple with an intuitive workflow: print templates, draw your glyphs, upload, and generate your font.
+      </p>
+      <a href="https://www.calligraphr.com" target="_blank" rel="noopener" class="calligraphr-logo">
+        Visit Calligraphr.com →
+      </a>
+      <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">
+        Free tier includes up to 75 characters. Pro features available for advanced typography.
+      </p>
+      <hr style="margin: 40px auto; width: 60%; border: none; border-top: 1px solid rgba(0, 212, 255, 0.2);">
+      <h3 style="color: #00ffaa; margin-bottom: 15px;">Generate Professional Specimens</h3>
+      <p>
+        Once you've created your font, use our <strong>Specimen Generator</strong> to create beautiful preview images. Upload your font file, customize the layout, and download professional 1200x400px PNG specimens ready for web galleries.
+      </p>
+      <a href="specimen.html" style="display: inline-block; margin-top: 20px; padding: 12px 30px; background: linear-gradient(135deg, #00d4ff 0%, #00ffaa 100%); color: #04070a; text-decoration: none; border-radius: 6px; font-weight: bold;">
+        Open Specimen Generator
+      </a>
+    </section>
+  </div>
+
+  <footer>
+    <p><strong>NQR Labs Cipher Fonts</strong></p>
+    <p>
+      Created by <a href="https://nqrlabs.com">NQR</a> |
+      Licensed under <a href="https://scripts.sil.org/OFL" target="_blank">SIL OFL 1.1</a>
+    </p>
+    <p>
+      <a href="https://github.com/NQRLabs/nqrlabs.github.io/tree/main/arg-fonts" target="_blank">GitHub</a> |
+      <a href="README.md">Documentation</a> |
+      <a href="CHANGELOG.md">Changelog</a>
+    </p>
+    <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">
+      © 2025 NQR | Free to use, modify, and distribute
+    </p>
+  </footer>
+</body>
+</html>
